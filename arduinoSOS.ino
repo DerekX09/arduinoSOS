@@ -29,9 +29,15 @@ void setup() {
 }
 
 // the loop function runs over and over again forever
+void blinkOnce(int time) {
+	digitalWrite(LED_BUILTIN, HIGH);
+	delay(time);
+	digitalWrite(LED_BUILTIN, LOW);
+	delay(time);
+}
+
 void loop() {
-  digitalWrite(LED_BUILTIN, HIGH);  // turn the LED on (HIGH is the voltage level)
-  delay(1000);                      // wait for a second
-  digitalWrite(LED_BUILTIN, LOW);   // turn the LED off by making the voltage LOW
-  delay(1000);                      // wait for a second
+     blinkOnce(2000);
+     blinkOnce(1000);
+     blinkOnce(2000);
 }
